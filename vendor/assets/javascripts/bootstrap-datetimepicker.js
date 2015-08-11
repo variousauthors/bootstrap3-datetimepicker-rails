@@ -2282,11 +2282,11 @@
         if (input.prop('disabled')) {
             picker.disable();
         }
-        if (input.is('input') && input.val().trim().length !== 0) {
-            setValue(parseInputDate(input.val().trim()));
-        }
-        else if (options.defaultDate && input.attr('placeholder') === undefined) {
+        if (options.defaultDate && input.attr('placeholder') === undefined) {
             setValue(options.defaultDate);
+        }
+        else if (input.is('input') && input.val().trim().length !== 0) {
+            setValue(parseInputDate(input.val().trim()));
         }
         if (options.inline) {
             show();
